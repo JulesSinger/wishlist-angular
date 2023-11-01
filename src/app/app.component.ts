@@ -6,7 +6,7 @@ import { WishItem } from 'src/shared/models/wishItem';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  items = [
+  items : WishItem[] = [
     new WishItem('An iPhone', true),
     new WishItem('A MacBook'),
     new WishItem('A Tesla')
