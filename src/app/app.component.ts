@@ -17,20 +17,14 @@ export class AppComponent {
     new WishItem('New Laptop'),
     new WishItem('Trip to Hawaii'),
     new WishItem('New Car')
-
-
   ];
+
   newWishText : string = '';
   listFilter: any = '0';
   title = 'wishlist';
 
   get visibleItems() : WishItem[] {
     return this.items.filter(filters[this.listFilter]);
-  }
-  
-
-  toggleItem(item: WishItem) {
-    item.isComplete = !item.isComplete;
   }
 
   addNewWish() {

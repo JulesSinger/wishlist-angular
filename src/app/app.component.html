@@ -31,24 +31,10 @@
     </div>
   </div>
 
-  <div *ngIf="visibleItems.length === 0 ; else wishlist">
-    <h2 class="text-center">No wishes added yet!</h2>
+  <div class="row mt-3">
+    <wish-list
+      [wishes]="visibleItems"
+    ></wish-list>
   </div>
-
-  <ng-template #wishlist>
-    <ul class="wish-list">
-      <li *ngFor="let item of visibleItems">
-        <div class="form-check">
-          <label for="" class="form-check-label">
-            <input 
-              [checked]="item.isComplete"
-              (click)="toggleItem(item)"
-              type="checkbox" 
-              class="checkbox"
-              > {{ item.wishText }}
-          </label>
-        </div>
-      </li>
-    </ul>
-  </ng-template>
+  
 </div>
