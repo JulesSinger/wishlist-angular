@@ -17,7 +17,7 @@ export class AppComponent {
     new WishItem('New Car')
   ];
 
-  filter : any = () => {};
+  filter : any;
 
 
 
