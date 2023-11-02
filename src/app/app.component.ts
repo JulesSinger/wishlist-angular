@@ -12,4 +12,8 @@ export class AppComponent {
     new WishItem('A Tesla')
   ];
   title = 'wishlist';
+
+  toggleItem(item: WishItem) {
+    item.isComplete = !item.isComplete;
+  }
 }

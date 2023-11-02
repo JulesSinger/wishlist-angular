@@ -9,7 +9,12 @@
       <li *ngFor="let item of items">
         <div class="form-check">
           <label for="" class="form-check-label">
-        <input type="checkbox" class="checkbox">  {{ item.wishText }}
+            <input 
+              [checked]="item.isComplete"
+              (click)="toggleItem(item)"
+              type="checkbox" 
+              class="checkbox"
+              > {{ item.wishText }}
           </label>
         </div>
       </li>
